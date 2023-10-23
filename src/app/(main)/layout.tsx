@@ -8,7 +8,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Container } from '@mui/material';
 import { AppMenu } from './AppMenu';
-import { useAppSelector } from '@respond/lib/client/store';
+import { useAppSelector } from '@me/lib/client/store';
 import LoginPanel from '../LoginPanel';
 
 export default function MainLayout({
@@ -27,7 +27,7 @@ export default function MainLayout({
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
       <Toolbar sx={{ display: 'flex', alignItems: 'center' }}>
         <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-          Tiger Mountain Challenge
+          Sample Auth Site
         </Typography>
         <AppMenu />
       </Toolbar>

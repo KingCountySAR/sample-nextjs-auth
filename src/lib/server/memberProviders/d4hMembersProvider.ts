@@ -1,4 +1,4 @@
-import mongoPromise from '@respond/lib/server/mongodb';
+import mongoPromise from '@me/lib/server/mongodb';
 import { MemberAuthInfo, MemberInfo, MemberProvider } from "./memberProvider";
 
 const D4H_MEMBER_REFRESH_SECS = 15 * 60;
@@ -126,7 +126,8 @@ export default class D4HMembersProvider implements MemberProvider {
       const chunk = (await (await fetch(`https://api.d4h.org/v2/team/groups?limit=${D4H_FETCH_LIMIT}&offset=${offset}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
-        }
+        },
+        cache: 'no-store',
       })).json())?.data as any[];
 
       offset += D4H_FETCH_LIMIT;
@@ -142,7 +143,8 @@ export default class D4HMembersProvider implements MemberProvider {
       const chunk = (await (await fetch(url, {
         headers: {
           'Authorization': `Bearer ${token}`,
-        }
+        },
+        cache: 'no-store',
       })).json())?.data as D4HMemberResponse[];
 
       offset += D4H_FETCH_LIMIT;

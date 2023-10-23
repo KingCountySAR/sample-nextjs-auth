@@ -1,15 +1,15 @@
 'use client';
 
-import { Box, Button, Stack } from '@respond/components/Material';
+import { Box, Button, Stack } from '@me/components/Material';
 import { CredentialResponse, GoogleLogin } from '@react-oauth/google';
-import Api from '@respond/lib/api';
-import { useAppDispatch, useAppSelector } from '@respond/lib/client/store';
-import { AuthActions } from '@respond/lib/client/store/auth';
-import { AuthResponse } from '@respond/types/authResponse'
+import Api from '@me/lib/api';
+import { useAppDispatch, useAppSelector } from '@me/lib/client/store';
+import { AuthActions } from '@me/lib/client/store/auth';
+import { AuthResponse } from '@me/types/authResponse'
 import { useState } from 'react'
-import { AuthError } from '@respond/lib/apiErrors'
+import { AuthError } from '@me/lib/apiErrors'
 import { Alert, AlertTitle } from '@mui/material'
-import { MemberProviderName } from '@respond/types/data/MemberProviderType'
+import { MemberProviderName } from '@me/types/data/MemberProviderType'
 
 export default function LoginPanel() {
   const { noExternalNetwork } = useAppSelector(state => state.config.dev );

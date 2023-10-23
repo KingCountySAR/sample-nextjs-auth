@@ -1,12 +1,12 @@
-import ClientOnly from '@respond/components/ClientOnly';
-import { getCookieAuth, userFromAuth } from '@respond/lib/server/auth';
+import ClientOnly from '@me/components/ClientOnly';
+import { getCookieAuth, userFromAuth } from '@me/lib/server/auth';
 import { headers } from 'next/headers';
 import ClientProviders, { SiteConfig } from './ClientProviders';
 import "./globals.css"
 
 export const metadata = {
-  title: 'Respond Site',
-  description: 'Respond to search and rescue activities',
+  title: 'Sample Auth Site',
+  description: 'Authenticate SAR Users',
 }
 
 export default async function RootLayout({

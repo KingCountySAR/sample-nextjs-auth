@@ -1,4 +1,4 @@
-import { MemberProviderType } from '@respond/types/data/MemberProviderType'
+import { MemberProviderType } from '@me/types/data/MemberProviderType'
 
 export interface MemberInfo {
   id: string;
